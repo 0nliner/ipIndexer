@@ -113,12 +113,12 @@ class WWWCrawler:
                     *tasks
                 )
                 tasks = []
-                cls.session.commit()
+                session.commit()
 
             tasks.append(cls.handle(http_addr))
             tasks.append(cls.handle(https_addr))
 
-        cls.session.close()
+        session.close()
 
 
 def start():
